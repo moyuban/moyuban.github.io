@@ -37,7 +37,11 @@ const getResult = (_n) => {
 
 const now = new Date()
 timeshow.innerText = `${now.getMonth() + 1}月${now.getDate()}日 ${now.getHours() > 11 ? '下午' : '上午'}好`
-favs.innerHTML = `<li>距离周末还有:${5 - now.getDay()}天</li>`
+const day = 5 - now.getDay()
+favs.innerHTML = `<li>距离周末还有:${day}天</li>`
+if (day < 0) {
+    favs.innerHTML = `<li><span style="text-decoration: line-through;">距离周末还有: </span> 周末快乐！(#^.^#) </li>`
+}
 
 console.log(getResult(now))
 favs.innerHTML += getResult(now).map(([a, b]) => `<li>距离${FAVS[b]}还有:${a}天</li>`).join('\n')

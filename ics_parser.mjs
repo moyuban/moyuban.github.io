@@ -1,6 +1,5 @@
 import * as fs from 'fs'
 import * as readline from 'readline'
-import * as crypto from 'crypto'
 
 let result = []
 let n = -1
