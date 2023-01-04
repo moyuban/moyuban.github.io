@@ -4,7 +4,7 @@ import * as readline from 'readline'
 let result = []
 let n = -1
 readline.createInterface({
-    input: fs.createReadStream('./chinese_lunar_2018_2025.ics'),
+    input: fs.createReadStream('./chinese_lunar_2018_2030.ics'),
 }).on('line', function (line) {
     const [key, value] = line.split(':')
     let f = null
